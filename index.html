@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-
+            <!--  Third Card -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
                     <img src="https://cdn.careerfoundry.com/en/wp-content/uploads/2021/06/Ui-designers.webp" class="card-img-top" style="height: 200px; object-fit: cover;" alt="dataAnalyst">
@@ -76,6 +76,38 @@
             </div>
             </div>
             </div>
+        <!-- TODO: Implement Task 3 here -->
+        <div class="row mt-5">
+            <h2 class="text-center mb-4">Contact Form</h2>
+            <form id="contactForm" onsubmit="event.preventDefault(); showModal();">
+
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingName" placeholder="Name" required>
+                    <label for="floatingName">Your Name</label>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingEmail" placeholder="name@gmail.com" required>
+                    <label for="floatingEmail">Email</label>
+                </div>
+
+
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="floatingMessage" placeholder="Message" style="height: 120px" required></textarea>
+                    <label for="floatingMessage">Message</label>
+                </div>
+
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary" >Submit</button>
+                </div>
+
+
+            </form>
+        </div>
+
     </div>
 </body>
 </html>
