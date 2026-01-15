@@ -108,6 +108,61 @@
             </form>
         </div>
 
+        <!-- TODO: Implement Task 4 here -->
+        <div class="modal fade" id="infoModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Information Saved</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modalContent">
+                            <p><strong>Name:</strong> <span id="displayName"></span></p>
+                            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+                            <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <script>
+            function showModal() {
+                const name = document.getElementById('floatingName').value;
+                const email = document.getElementById('floatingEmail').value;
+                const message = document.getElementById('floatingMessage').value;
+
+
+                if (!name || !email || !message) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+                document.getElementById('displayName').textContent = name;
+        document.getElementById('displayEmail').textContent = email;
+        document.getElementById('displayMessage').textContent = message;
+
+
+        const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+        modal.show();
+     }
+
+
+     function submitForm() {
+        alert('Form submitted successfully!');
+        document.getElementById('contactForm').reset();
+        const modal = bootstrap.Modal.getInstance(document.getElementById('infoModal'));
+        modal.hide();
+     }
+        </script>
     </div>
 </body>
 </html>
